@@ -53,11 +53,6 @@ header {
     align-items: center;
 }
 
-.el-breadcrumb__inner.is-link {
-    font-weight: 50 !important;
-    color: #fff;
-}
-
 
 .l-content {
     display: flex;
