@@ -2,7 +2,11 @@
     <header>
         <div class="l-content">
             <el-button @click="headerMenu" plain icon="el-icon-menu" size="mini"></el-button>
-            <h3 style="color: #fff">首页</h3>
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item v-for="item in tags" :key="item.path" :to="{ path: item.path }">{{ item.label }}
+                </el-breadcrumb-item>
+
+            </el-breadcrumb>
         </div>
         <div class="r-content">
             <el-dropdown triger="click" size="mini">
@@ -19,6 +23,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
     name: 'CommonHeader',
     data() {
@@ -30,6 +36,11 @@ export default {
         headerMenu() {
             this.$store.commit('collapseMenu')
         }
+    },
+    computed: {
+        ...mapState({
+            tags: state => state.tab.tabsList
+        })
     }
 }
 
@@ -41,6 +52,12 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+.el-breadcrumb__inner.is-link {
+    font-weight: 50 !important;
+    color: #fff;
+}
+
 
 .l-content {
     display: flex;

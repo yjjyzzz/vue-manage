@@ -1,10 +1,24 @@
-.manage{
-    height: 90%;
-    padding-bottom: 20px;
-    overflow: hidden;
-    &header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+.manage {
+  height: 90%;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  &header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
+}
+
+.el-breadcrumb__inner.is-link {
+  font-weight: 200;
+  color: #606266;
+}
+
+.el-breadcrumb__item:last-child .el-breadcrumb__inner,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner a,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner:hover {
+  font-weight: 700;
+  color: #fff
+}
