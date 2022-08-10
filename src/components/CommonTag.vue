@@ -49,7 +49,7 @@ export default {
         }
     }
 }
-
+//面包屑样式
 </script>
 <style lang="less" scoped>
 .tabs {
