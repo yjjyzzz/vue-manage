@@ -20,5 +20,4 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+vue2的第一个项目，后台管理系统，使用了vue cli2,element UI,echarts图表
