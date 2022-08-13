@@ -176,7 +176,7 @@ export default {
                 tyep: "warning"
             }).then(() => {
                 const id = row.id
-                this.$http.post("/user/del", {
+                this.$http.get("/user/del", {
                     params: { id }
                 }).then(() => {
                     this.$message({
